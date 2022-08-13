@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body class="flex-cent">
+    <div class="card-frame flex-cent">
+      <!-- LEFT SIDE OF DISPLAY-->
+      <div class="left">
+        <div class="credit-cards display-card flex-cent">
+          <div class="logo-box">
+            <img src="./images/card-logo.svg" />
+          </div>
+          <div class="info-box flex-cent">
+            <div class="num-box flex-cent"><h2 id="card-number"></h2></div>
+            <div class="holder-box flex-cent">
+              <h3 id="card-holder"></h3>
+              <h3 id="exp-holder"></h3>
+            </div>
+          </div>
+        </div>
+        <div class="credit-cards card-back"></div>
+      </div>
+      <!-- END OF LEFT SIDE OF DISPLAY-->
+
+      <!-- RIGHT SIDE OF THE DISPLAY -->
+      <div class="right flex-cent">
+        <div class="form-box flex-cent">
+          <form id="card-form" class="form-box flex-cent">
+            <label>CARDHOLDER NAME</label>
+            <input
+              id="get-holder"
+              type="text"
+              placeholder="e.g. JANE APPLESEED"
+            />
+            <label>CARDHOLDER NUMBER</label>
+            <input
+              id="get-num"
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="19"
+            />
+            <div class="exp-labels">
+              <label>EXP. DATE (MM/YY)</label>
+              <label class="cvv-lab">CVV</label>
+            </div>
+            <div class="exp-box">
+              <input
+                id="get-MM"
+                class="card-date"
+                type="text"
+                placeholder="MM"
+                maxlength="2"
+              />
+              <input
+                id="get-YY"
+                class="card-date"
+                type="text"
+                placeholder="YY"
+                maxlength="2"
+              />
+              <input
+                id="get-cvv"
+                class="cvv"
+                type="text"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+            </div>
+            <button id="submit-btn" class="btn">Confirm</button>
+          </form>
+        </div>
+      </div>
+      <!-- END OF RIGHT SIDE OF DISPLAY-->
+    </div>
+    <script src="./form.js"></script>
+  </body>
+</html>
