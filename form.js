@@ -7,6 +7,8 @@ const getMonth = document.getElementById("get-MM");
 const getYear = document.getElementById("get-YY");
 const expiry = document.getElementById("exp-holder");
 const cardForm = document.getElementById("card-form");
+const cvv = document.getElementById('cvv');
+const getCvv = document.getElementById('get-cvv');
 
 const validator = (field, length = 1) => {
   if (!field || field.value.length < length) {
@@ -31,8 +33,10 @@ submitBtn.addEventListener("click", (e) => {
   if (!validator(getNum, 19)) return false;
   if (!validator(getMonth, 2)) return false;
   if (!validator(getYear, 2)) return false;
+  if (!validator(getCvv, 3)) return false;  
   cardHold.innerHTML = getHolder.value;
   cardNum.innerHTML = getNum.value;
   expiry.innerHTML = `${getMonth.value}/${getYear.value}`;
+  cvv.innerHTML = getCvv.value;
   cardForm.reset();
 });
